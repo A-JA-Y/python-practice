@@ -12,11 +12,38 @@
 
 # 2. print the fractions
 
-def add_digits(int):
-    while num >= 10:
-        sum_digits = 0
-        for digit in str(num):
-            sum_digits += int(digit)
-        num = sum_digits
-    return num
+# def add_digits(int):
+#     while num >= 10:
+#         sum_digits = 0
+#         for digit in str(num):
+#             sum_digits += int(digit)
+#         num = sum_digits
+#     return num
+
+
+# fibonacci of n number
+
+# def fib(n):
+#     if n==0:
+#         return 0
+#     elif n == 1:
+#         return 1
+#     return fib(n-1) + fib(n-2)
+
+# print(fib(5))
+
+
+class Solution:
+    def fib(self, n: int) -> int:
+        if n <= 0:
+            return 0
+        elif n == 1:
+            return 1
+        else:
+            return self.fib(n-1) + self.fib(n-2)
+
+    
+            
+
+
 
