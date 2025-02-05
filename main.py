@@ -33,17 +33,48 @@
 # print(fib(5))
 
 
-class Solution:
-    def fib(self, n: int) -> int:
-        if n <= 0:
-            return 0
-        elif n == 1:
-            return 1
-        else:
-            return self.fib(n-1) + self.fib(n-2)
+# class Solution:
+#     def fib(self, n: int) -> int:
+#         if n <= 0:
+#             return 0
+#         elif n == 1:
+#             return 1
+#         else:
+#             return self.fib(n-1) + self.fib(n-2)
 
-    
+
+#perfect number
+
+class Solution:
+    def checkPerfectNumber(self, num: int) -> bool:
+        if(num<=1):
+            return False
+        divisor_sum = 1
+        for i in range(2, int(num**0.5) + 1):
+          if num % i == 0:
+            divisor_sum += i
+            if i * i != num:
+              divisor_sum += num // i
+        
+        return divisor_sum == num
+
             
+        
+
+
+
+        
+
+sol = Solution()
+print(sol.checkPerfectNumber(28))
+print(sol.checkPerfectNumber(6))
+print(sol.checkPerfectNumber(496))
+print(sol.checkPerfectNumber(8128))
+
+
+        
+
+
 
 
 
