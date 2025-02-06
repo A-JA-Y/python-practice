@@ -45,31 +45,61 @@
 
 #perfect number
 
-class Solution:
-    def checkPerfectNumber(self, num: int) -> bool:
-        if(num<=1):
-            return False
-        divisor_sum = 1
-        for i in range(2, int(num**0.5) + 1):
-          if num % i == 0:
-            divisor_sum += i
-            if i * i != num:
-              divisor_sum += num // i
+# class Solution:
+#     def checkPerfectNumber(self, num: int) -> bool:
+#         if(num<=1):
+#             return False
+#         divisor_sum = 1
+#         for i in range(2, int(num**0.5) + 1):
+#           if num % i == 0:
+#             divisor_sum += i
+#             if i * i != num:
+#               divisor_sum += num // i
         
-        return divisor_sum == num
-
+#         return divisor_sum == num
             
-        
+#permution problem : return all possible permutuation of a given list
+
+
+# def permute(nums):
+#     result = []
+
+#     if len(nums) == 1:
+#         return [nums[:]]
+
+#     for i in range(len(nums)):
+#         n = nums.pop(0)
+#         perms = permute(nums)
+
+#         for perm in perms:
+#             perm.append(n)
+#         result.extend(perms)
+#         nums.append(n)
+
+#     return result
+
+
+# print(permute([1,2,3]))
 
 
 
-        
+# happy number
 
-sol = Solution()
-print(sol.checkPerfectNumber(28))
-print(sol.checkPerfectNumber(6))
-print(sol.checkPerfectNumber(496))
-print(sol.checkPerfectNumber(8128))
+class Solution:
+    def isHappy(self, n: int) -> bool:
+        seen = set()
+        while n != 1 and n not in seen:
+            seen.add(n)
+            n = self.sum_of_squares(n)
+        return n == 1
+
+    def sum_of_squares(self, n: int) -> int:
+        sum_squares = 0
+        while n:
+            digit = n % 10
+            sum_squares += digit ** 2
+            n //= 10
+        return sum_squares
 
 
         
