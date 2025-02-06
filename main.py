@@ -104,12 +104,31 @@
 
 
 # Suggested code may be subject to a license. Learn more: ~LicenseLog:1413961163.
-class Solution:
-    def maximumProduct(self, nums: list[int]) -> int:
-        nums.sort()
-        return max(nums[-1] * nums[-2] * nums[-3], nums[0] * nums[1] * nums[-1])
+# class Solution:
+#     def maximumProduct(self, nums: list[int]) -> int:
+#         nums.sort()
+#         return max(nums[-1] * nums[-2] * nums[-3], nums[0] * nums[1] * nums[-1])
 
-        
+
+# def isHappy(n):
+#     seen = set()
+    
+#     while n != 1 and n not in seen:
+#         seen.add(n)
+#         n = sum_of_squares(n)
+#         print(seen)
+#     return n == 1
+    
+
+# def sum_of_squares(n):
+#     sum_squares = 0
+#     while n:
+#         digit = n % 10
+#         sum_squares += digit ** 2
+#         n //= 10
+#     return sum_squares 
+
+# print(isHappy(19))
 
 
 
