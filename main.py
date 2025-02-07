@@ -162,18 +162,32 @@
         
 
 # sorted and rotated or not
-def check(nums):
-    count = 0
-    for i in range(len(nums)):
-        # Check if the current element is greater than the next element (circularly)
-        if nums[i] > nums[(i + 1) % len(nums)]:    
-            count += 1
-            print(count)
-    return count <= 1
+# def check(nums):
+#     count = 0
+#     for i in range(len(nums)):
+#         # Check if the current element is greater than the next element (circularly)
+#         if nums[i] > nums[(i + 1) % len(nums)]:    
+#             count += 1
+#             print(count)
+#     return count <= 1
 
-print(check([3,4,5,1,2]))
-print(check([2,1,3,4]))
-print(check([1,2,3]))
+# print(check([3,4,5,1,2]))
+# print(check([2,1,3,4]))
+# print(check([1,2,3]))
+
+# Given an integer numRows, return the first numRows of Pascal's triangle.
+
+# def generate(numRows):
+#     triangle = []
+#     for i in range(numRows):
+#         row = [None] * (i + 1)
+#         row[0], row[-1] = 1, 1
+#         for j in range(1, len(row) - 1):
+#             row[j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
+#         triangle.append(row)
+#     return triangle
+# print(generate(5))
+
 
 
         
