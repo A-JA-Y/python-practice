@@ -161,7 +161,7 @@
 # print(twoSum(nums, 18))
         
 
-
+# sorted and rotated or not
 def check(nums):
     count = 0
     for i in range(len(nums)):
