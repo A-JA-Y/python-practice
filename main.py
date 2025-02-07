@@ -189,6 +189,25 @@
 # print(generate(5))
 
 
+# frequency
+def max_frequency_elements(nums):
+    counts = {}
+    for num in nums:
+        counts[num] = counts.get(num, 0) + 1
+    max_freq = 0
+    for num in counts:
+        max_freq = max(max_freq, counts[num])
+    total_freq = 0
+    for num in counts:
+        if counts[num] == max_freq:
+            total_freq += counts[num]
+    return total_freq
+
+print(max_frequency_elements([1,2,2,3,1,4]))
+print(max_frequency_elements([1,2,3,4,5]))
+
+
+
 
         
             
