@@ -130,6 +130,37 @@
 
 # print(isHappy(19))
 
+#two sum problem
+# def twoSum(nums):
+#     for i in range(len(nums)):
+#         for j in range(i+1, len(nums)):
+#             if nums[i] + nums[j] == target:
+#                 return [i, j]
+#     return []
+
+# nums = [2,7,11,15]
+# target = 9
+# print(twoSum(nums))
+
+
+# def twoSum(nums, target):
+#     num_dict = {}
+
+#     for i, num in enumerate(nums):
+#         complement = target - num
+
+#         if complement in num_dict:
+#             return[num_dict[complement], i]
+
+#         num_dict[num] = i
+
+#     return[]
+
+# nums = [2,7,11,15]
+
+# print(twoSum(nums, 18))
+        
+
 
 
 
