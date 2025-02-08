@@ -222,15 +222,39 @@
 
 
 
-# Suggested code may be subject to a license. Learn more: ~LicenseLog:2963335628.
-# class Solution:
-#     def runningSum(self, nums: list[int]) -> list[int]:
-#         running_sum = []
-#         current_sum = 0
-#         for num in nums:
-#             current_sum += num
-#             running_sum.append(current_sum)
-#         return running_sum
+
+
+# def runningSum(nums):
+#     running_sum = []
+#     current_sum = 0
+#     for num in nums:
+#         current_sum += num
+#         print(current_sum)
+#         running_sum.append(current_sum)
+#         print(running_sum)
+#         print(current_sum)
+#     return running_sum
+
+# print(runningSum([1,2,3,4]))
+
+
+
+# move zeroes
+
+class Solution:
+    def moveZeroes(self, nums: list[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        zero_count = nums.count(0)
+        nums[:] = [num for num in nums if num != 0]
+        nums.extend([0] * zero_count)
+
+
+        
+
+
+
 
 
         
