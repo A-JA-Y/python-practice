@@ -241,14 +241,38 @@
 
 # move zeroes
 
-class Solution:
-    def moveZeroes(self, nums: list[int]) -> None:
-        """
-        Do not return anything, modify nums in-place instead.
-        """
-        zero_count = nums.count(0)
-        nums[:] = [num for num in nums if num != 0]
-        nums.extend([0] * zero_count)
+# class Solution:
+#     def moveZeroes(self, nums: list[int]) -> None:
+#         """
+#         Do not return anything, modify nums in-place instead.
+#         """
+#         zero_count = nums.count(0)
+#         nums[:] = [num for num in nums if num != 0]
+#         nums.extend([0] * zero_count)
+
+
+#User function Template for python3
+
+def missingNumber(arr):
+    arr.sort()
+    n = len(arr)
+    
+    # Check if 1 is missing
+    if arr[0] != 1:
+        return 1
+
+    # Check if the missing number is in between the array
+    for i in range(n - 1):
+        if arr[i+1] - arr[i] > 1:
+            return arr[i] + 1
+
+    # If no number is missing in between, check if n+1 is missing
+    return arr[-1] + 1
+
+
+
+
+print(missingNumber([1,2,4,5]))
 
 
         
