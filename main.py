@@ -253,26 +253,44 @@
 
 #User function Template for python3
 
-def missingNumber(arr):
+# def missingNumber(arr):
+#     arr.sort()
+#     n = len(arr)
+    
+#     # Check if 1 is missing
+#     if arr[0] != 1:
+#         return 1
+
+#     # Check if the missing number is in between the array
+#     for i in range(n - 1):
+#         if arr[i+1] - arr[i] > 1:
+#             return arr[i] + 1
+
+#     # If no number is missing in between, check if n+1 is missing
+#     return arr[-1] + 1
+
+
+
+
+# print(missingNumber([1,2,4,5]))
+
+def getSecondLargest(arr):
     arr.sort()
     n = len(arr)
-    
-    # Check if 1 is missing
-    if arr[0] != 1:
-        return 1
 
-    # Check if the missing number is in between the array
-    for i in range(n - 1):
-        if arr[i+1] - arr[i] > 1:
-            return arr[i] + 1
+    for i in range(n-2,-1,-1):
+        if(arr[i] != arr[n-1]):
+            return arr[i]
+        
+    return -1
 
-    # If no number is missing in between, check if n+1 is missing
-    return arr[-1] + 1
+getSecondLargest([2,1,2])
 
 
+if(getSecondLargest([2,1,2]) == 1):
+    print("Correct")
 
 
-print(missingNumber([1,2,4,5]))
 
 
         
