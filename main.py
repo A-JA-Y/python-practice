@@ -274,23 +274,40 @@
 
 # print(missingNumber([1,2,4,5]))
 
-def getSecondLargest(arr):
-    arr.sort()
-    n = len(arr)
+# def getSecondLargest(arr):
+#     arr.sort()
+#     n = len(arr)
 
-    for i in range(n-2,-1,-1):
-        if(arr[i] != arr[n-1]):
-            return arr[i]
+#     for i in range(n-2,-1,-1):
+#         if(arr[i] != arr[n-1]):
+#             return arr[i]
         
-    return -1
+#     return -1
 
-getSecondLargest([2,1,2])
-
-
-if(getSecondLargest([2,1,2]) == 1):
-    print("Correct")
+# getSecondLargest([2,1,2])
 
 
+# if(getSecondLargest([2,1,2]) == 1):
+#     print("Correct")
+
+
+# leader number 
+
+def leaders(arr):
+        # code here
+    ans= [] 
+    for i in range(len(arr)):
+        for j in range(i+1,len(arr)):
+            if arr[i]<arr[j]:
+                break
+        else:
+            ans.append(arr[i])
+    return ans
+
+print(leaders([16,17,4,3,5,2]))
+    
+
+   
 
 
         
