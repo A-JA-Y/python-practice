@@ -293,18 +293,21 @@
 
 # leader number 
 
-def leaders(arr):
-        # code here
-    ans= [] 
-    for i in range(len(arr)):
-        for j in range(i+1,len(arr)):
-            if arr[i]<arr[j]:
-                break
-        else:
-            ans.append(arr[i])
-    return ans
+# def leaders(arr):
+#         # code here
+#     ans= [] 
+#     for i in range(len(arr)):
+#         for j in range(i+1,len(arr)):
+#             if arr[i]<arr[j]:
+#                 break
+#         else:
+#             ans.append(arr[i])
+#     return ans
 
-print(leaders([16,17,4,3,5,2]))
+# print(leaders([16,17,4,3,5,2]))
+
+
+#peak e
     
 
    
