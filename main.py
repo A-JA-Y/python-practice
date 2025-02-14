@@ -325,7 +325,32 @@
 #             if left and right:
 #                 return i
 
-def revThe
+def revTheArr(n,arr):
+  firstHalfProduct = 1
+  secondHalfProduct = 1
+
+  for i in range(0, n // 2):
+    firstHalfProduct *= arr[i]
+  for i in range(n // 2, n):
+    secondHalfProduct *= arr[i]
+  
+  if firstHalfProduct < secondHalfProduct:
+    # Changed: arr.reverse() modifies the list in-place and returns None.
+    # We need to return the reversed list itself.
+    arr.reverse()
+    return arr
+    
+    
+    
+    return arr.reverse()
+  else:
+    return arr
+
+
+print(revTheArr(5,[1,2,3,4,5]))
+
+
+
 
 
 
