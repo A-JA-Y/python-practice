@@ -307,7 +307,28 @@
 # print(leaders([16,17,4,3,5,2]))
 
 
-#peak e
+#peak element
+
+# class Solution:   
+#     def peakElement(self,arr):
+#         # Code here
+        
+#         for i in range(len(arr)):
+#             left = True
+#             right = True
+            
+#             if i > 0 and arr[i]<= arr[i-1]:
+#                 left = False
+#             if i<(len(arr)-1) and arr[i]<=arr[i+1]:
+#                 right = False
+                
+#             if left and right:
+#                 return i
+
+def rev
+
+
+
     
 
    
