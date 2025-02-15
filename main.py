@@ -351,14 +351,26 @@
 
 # sum of n numbers
 
-class Solution:
-    def seriesSum(self, n : int) -> int:
-        # code here
-        sum = 0
-        for i in range(1,n+1):
-            sum+=i
-        return sum
+# class Solution:
+#     def seriesSum(self, n : int) -> int:
+#         # code here
+#         sum = 0
+#         for i in range(1,n+1):
+#             sum+=i
+#         return sum
 
+
+# largest element of array
+
+# class Solution:
+#     def largest(self, arr):
+#         largest = -1
+        
+#         for i in range(len(arr)):
+#             if arr[i]>largest:
+#                 largest=arr[i]
+                
+#         return largest
 
 
 
