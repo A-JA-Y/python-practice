@@ -325,29 +325,39 @@
 #             if left and right:
 #                 return i
 
-def revTheArr(n,arr):
-  firstHalfProduct = 1
-  secondHalfProduct = 1
+# def revTheArr(n,arr):
+#   firstHalfProduct = 1
+#   secondHalfProduct = 1
 
-  for i in range(0, n // 2):
-    firstHalfProduct *= arr[i]
-  for i in range(n // 2, n):
-    secondHalfProduct *= arr[i]
+#   for i in range(0, n // 2):
+#     firstHalfProduct *= arr[i]
+#   for i in range(n // 2, n):
+#     secondHalfProduct *= arr[i]
   
-  if firstHalfProduct < secondHalfProduct:
-    # Changed: arr.reverse() modifies the list in-place and returns None.
-    # We need to return the reversed list itself.
-    arr.reverse()
-    return arr
+#   if firstHalfProduct < secondHalfProduct:
+    
+#     arr.reverse()
+#     return arr
     
     
     
-    return arr.reverse()
-  else:
-    return arr
+#     return arr.reverse()
+#   else:
+#     return arr
 
 
-print(revTheArr(5,[1,2,3,4,5]))
+# print(revTheArr(5,[1,2,3,4,5]))
+
+
+# sum of n numbers
+
+class Solution:
+    def seriesSum(self, n : int) -> int:
+        # code here
+        sum = 0
+        for i in range(1,n+1):
+            sum+=i
+        return sum
 
 
 
