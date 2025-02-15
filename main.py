@@ -373,6 +373,22 @@
 #         return largest
 
 
+# search x in arr
+
+# class Solution:
+#     #Complete the below function
+#     def search(self,arr, x):
+#         #Your code here
+#         idx = 0
+      
+        
+#         for i in range(len(arr)):
+#             if arr[i]==x:
+#                 return i
+            
+#         return -1
+
+
 
 
 
