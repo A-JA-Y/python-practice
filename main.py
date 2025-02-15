@@ -392,6 +392,79 @@
 
 
 
+# cheking sub set
+# def isSubset(a, b):
+#         # Your code here
+    
+#     prevA = len(a)
+        
+#     for i in range(len(b)):
+#         for j in range(len(a)):
+#             if a[j]==b[i]:
+#                 a.pop(j)
+#                 break
+
+#     newA = len(a)
+                    
+#     return prevA == newA+len(b)
+
+
+
+
+# print(isSubset([1,2,3,4,5,6],[2,4]))
+
+
+
+
+# class Solution:
+#     #Function to check if a is a subset of b.
+#     def isSubset(self, a, b):
+#         # Your code here
+#         totalN = 0
+        
+#         for i in range(len(b)):
+#             for j in range(len(a)):
+#                 if a[j]==b[i]:
+#                     totalN+=1
+#                     a.pop(j)
+#                     break
+#         return totalN==len(b)
+
+
+class Solution:
+    #Function to check if a is a subset of b.
+    def isSubset(self, a, b):
+        # Your code here
+        m = len(a)
+        n= len(b)
+        for i in range(n):
+            found = False
+            for j in range(m):
+                if b[i]==a[j]:
+                    found = True
+                    break
+                
+            if not found:
+                return False
+                    
+        return True
+
+
+class Solution:
+    #Function to check if a is a subset of b.
+    def isSubset(self, a, b):
+        # Your code here
+       hash_set = set(a)
+       for num in b:
+           if num not in hash_set:
+               return False
+               
+       return True
+
+
+
+
+
     
 
    
