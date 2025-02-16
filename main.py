@@ -431,36 +431,51 @@
 #         return totalN==len(b)
 
 
-class Solution:
-    #Function to check if a is a subset of b.
-    def isSubset(self, a, b):
-        # Your code here
-        m = len(a)
-        n= len(b)
-        for i in range(n):
-            found = False
-            for j in range(m):
-                if b[i]==a[j]:
-                    found = True
-                    break
+# class Solution:
+#     #Function to check if a is a subset of b.
+#     def isSubset(self, a, b):
+#         # Your code here
+#         m = len(a)
+#         n= len(b)
+#         for i in range(n):
+#             found = False
+#             for j in range(m):
+#                 if b[i]==a[j]:
+#                     found = True
+#                     break
                 
-            if not found:
-                return False
+#             if not found:
+#                 return False
                     
-        return True
+#         return True
 
 
-class Solution:
-    #Function to check if a is a subset of b.
-    def isSubset(self, a, b):
-        # Your code here
-       hash_set = set(a)
-       for num in b:
-           if num not in hash_set:
-               return False
+# class Solution:
+#     #Function to check if a is a subset of b.
+#     def isSubset(self, a, b):
+#         # Your code here
+#        hash_set = set(a)
+#        for num in b:
+#            if num not in hash_set:
+#                return False
                
-       return True
+#        return True
 
+
+
+# reverse a string
+
+def reverseString(self, s: str) -> str:
+        # code here
+        arr = list(str)
+        
+        
+        arr.reverse()
+        
+        
+        str2 = ''.join(arr)
+        
+        return str2
 
 
 
