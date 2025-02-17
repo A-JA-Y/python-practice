@@ -465,17 +465,33 @@
 
 # reverse a string
 
-def reverseString(self, s: str) -> str:
-        # code here
-        arr = list(str)
+# def reverseString(self, s: str) -> str:
+#         # code here
+#         arr = list(str)
         
         
-        arr.reverse()
+#         arr.reverse()
         
         
-        str2 = ''.join(arr)
+#         str2 = ''.join(arr)
         
-        return str2
+#         return str2
+
+
+#reverse array in groups
+
+
+    
+def reverseInGroups(arr, k):
+    n = len(arr)
+    for i in range(0, n, k):
+        if i + k < n:
+            arr[i:i + k] = reversed(arr[i:i + k])
+        else:
+            arr[i:n] = reversed(arr[i:n])
+    return arr
+
+print(reverseInGroups([1,2,3,4,5,6,7,8],3))
 
 
 
