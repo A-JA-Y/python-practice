@@ -480,18 +480,55 @@
 
 #reverse array in groups
 
+# Function to reverse an array in groups of size k
+# def reverseInGroups(arr, k):
+#     """
+#     Reverses the elements of an array in groups of size k.
 
-    
-def reverseInGroups(arr, k):
-    n = len(arr)
-    for i in range(0, n, k):
-        if i + k < n:
-            arr[i:i + k] = reversed(arr[i:i + k])
-        else:
-            arr[i:n] = reversed(arr[i:n])
-    return arr
+#     Args:
+#         arr: The list to be reversed in groups.
+#         k: The size of each group.
 
-print(reverseInGroups([1,2,3,4,5,6,7,8],3))
+#     Returns:
+#         The modified list with elements reversed in groups.
+#     """
+#     # Get the length of the array
+#     n = len(arr)
+#     # Iterate through the array with a step of k
+#     for i in range(0, n, k):
+#         # Check if the current group is within the array bounds
+#         if i + k < n:
+#             # Reverse the elements within the current group
+#             # arr[i:i + k] extracts a slice of the list from index i to i+k (exclusive).
+#             # reversed(arr[i:i + k]) returns a reversed iterator of this slice.
+#             # arr[i:i + k] = ... assigns the reversed elements back to the slice.
+#             arr[i:i + k] = reversed(arr[i:i + k])
+#         # If the current group extends beyond the array bounds
+#         else:
+#             # Reverse the remaining elements from index i to the end of the array
+#             # arr[i:n] extracts a slice from index i to the end.
+#             # reversed(arr[i:n]) returns a reversed iterator of this slice.
+#             # arr[i:n] = ... assigns the reversed elements back to the slice.
+#             arr[i:n] = reversed(arr[i:n])
+#     # Return the modified array
+#     return arr
+
+# print(reverseInGroups([1,2,3,4,5,6,7,8],3))
+
+
+
+#  search k in arr
+# class Solution:
+#     ##Complete this function
+#     def searchInSorted(self,arr, k):
+#         #Your code here
+#         for i in range(len(arr)):
+#             if k==arr[i]:
+#                 return True
+#         return False
+
+# s = Solution()
+# print(s.searchInSorted([1,2,3,4,5,6,7,8],8))
 
 
 
