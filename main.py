@@ -533,23 +533,37 @@
 
 
 
-    
-
-   
-
-
-        
 
 
 
 
+import pandas as pd
 
-        
-            
+# Load the data
+input_file = 'allcall_report.xlsx'  # replace with your actual file name
+data = pd.read_excel(input_file)
 
+# Ensure 'Open Date(DD-MM-YYYY)' and 'Close Date' are datetime
+data['Open Date(DD-MM-YYYY)'] = pd.to_datetime(data['Open Date(DD-MM-YYYY)'], format='%d-%m-%Y')
+data['Close Date'] = pd.to_datetime(data['Close Date'], format='%d-%m-%Y')
 
+# Calculate the time taken to complete each job
+data['Time Taken'] = (data['Close Date'] - data['Open Date(DD-MM-YYYY)']).dt.days
 
+# Group by ASF Name and calculate total calls and average time taken
+asf_stats = data.groupby('ASF Name').agg(
+    Total_calls=('S.No.', 'count'),
+    Avg_time_taken=('Time Taken', 'mean')
+).reset_index()
 
-       
+# Rank the ASF Names based on total calls and average time taken
+asf_stats['Rank'] = asf_stats.rank(method='first', ascending=[False, True], numeric_only=True).astype(int)['Total_calls']
 
+# Sort by rank
+asf_stats = asf_stats.sort_values('Rank')
 
+# Save the result to a new file
+output_file = 'asf_ranking.csv'  # replace with your desired output file name
+asf_stats.to_csv(output_file, index=False)
+
+print(f"ASF ranking data has been saved to {output_file}")
