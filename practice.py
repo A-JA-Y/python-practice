@@ -23,3 +23,23 @@
 #                     return False
 #             return True
 #         return True
+
+
+
+# class Solution:
+#     def get_min_max(self, arr):
+#         minN = arr[0]
+#         maxN = 1
+#         minMax=[]
+        
+#         for i in range(len(arr)):
+#             if maxN <= arr[i]:
+#                 maxN=arr[i]
+#         for i in range(len(arr)):
+#             if minN >= arr[i]:
+#                 minN=arr[i]
+        
+#         minMax.append(minN)
+#         minMax.append(maxN)
+        
+#         return minMax
