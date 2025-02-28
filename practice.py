@@ -43,3 +43,31 @@
 #         minMax.append(maxN)
         
 #         return minMax
+
+
+
+# def avg(*args):
+#     n = len(args)
+#     sum=0
+    
+#     for i in range(n):
+#         sum+= args[i]
+        
+        
+#     return round(sum/n,3)
+
+
+# print(avg(2, 5))
+
+
+def fizzBuzz(n):
+    # Write your code here
+    for i in range(1,n+1):
+        if i%3==0 and i%5==0:
+            print("FizzBuzz")
+        elif i%3==0 and i%5!=0:
+            print("Fizz")
+        elif i%5==0 and i%3!=0:
+            print("Buzz")
+        else:
+            print(i)
