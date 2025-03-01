@@ -60,14 +60,44 @@
 # print(avg(2, 5))
 
 
-def fizzBuzz(n):
-    # Write your code here
-    for i in range(1,n+1):
-        if i%3==0 and i%5==0:
-            print("FizzBuzz")
-        elif i%3==0 and i%5!=0:
-            print("Fizz")
-        elif i%5==0 and i%3!=0:
-            print("Buzz")
-        else:
-            print(i)
+# def fizzBuzz(n):
+#     # Write your code here
+#     for i in range(1,n+1):
+#         if i%3==0 and i%5==0:
+#             print("FizzBuzz")
+#         elif i%3==0 and i%5!=0:
+#             print("Fizz")
+#         elif i%5==0 and i%3!=0:
+#             print("Buzz")
+#         else:
+#             print(i)
+
+
+# two sum
+
+
+# def two_sum(arr,t):
+#     for i in range(len(arr)):
+#         for j in range(len(arr)):
+#             if arr[i]+arr[j]==t:
+#                 return [i,j]
+#     return []
+
+# print(two_sum([2,7,11,15],9))
+
+
+
+
+# palindrome
+
+def palindromeCheck(n):
+    strN= str(n)
+    revStrN = ""+reversed(strN)
+
+    if strN==revStrN:
+        return True
+    else:
+        return False
+
+print(palindromeCheck(121))
+
