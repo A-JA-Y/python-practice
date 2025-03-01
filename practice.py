@@ -1,3 +1,6 @@
+# Suggested code may be subject to a license. Learn more: ~LicenseLog:3267381726.
+# Suggested code may be subject to a license. Learn more: ~LicenseLog:2314450276.
+# Suggested code may be subject to a license. Learn more: ~LicenseLog:827008756.
 # y=2016
 # population = 80000
 # for i in range(y,2021):
@@ -90,14 +93,60 @@
 
 # palindrome
 
-def palindromeCheck(n):
-    strN= str(n)
-    revStrN = ""+reversed(strN)
+# def palindromeCheck(n):
+#     strN= str(n)
+#     revStrN = ""+reversed(strN)
 
-    if strN==revStrN:
-        return True
-    else:
-        return False
+#     if strN==revStrN:
+#         return True
+#     else:
+#         return False
 
-print(palindromeCheck(121))
+# print(palindromeCheck(121))
+
+
+# class Solution:
+#     def romanToInt(self, s: str) -> int:
+#         roman_map = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+#         result = 0
+#         prev_value = 0
+
+#         for i in range(len(s) - 1, -1, -1):
+#             curr_value = roman_map[s[i]]
+
+#             if curr_value < prev_value:
+#                 result -= curr_value
+#             else:
+#                 result += curr_value
+
+#             prev_value = curr_value
+
+#         return result
+
+
+
+# class Solution:
+#     def romanToInt(self, s: str) -> int:
+#         lsStr=str.split("")
+#         num = 0
+#         for ch in range(len(lsStr)):
+#             if lsSTr[ch]=='I':
+#                 num+=1
+#             if lsStr[ch]=="V":
+#                 num+=5
+#             if lsStr[ch]=="X":
+#                 num+=10
+#             if lsStr[ch]=="L":
+#                 num+=50
+#             if lsStr[ch]=="C":
+#                 num+=100
+#             if lsStr(ch)=="D":
+#                 num+=500
+#             if lsStr[ch]=="M":
+#                 num+=1000
+#         return num
+            
+
+# s = Solution()
+# print(s.romanToInt("MCMXCIV"))
 
