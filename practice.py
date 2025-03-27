@@ -177,11 +177,37 @@
 
 # two sum
 
+# class Solution:
+#     def twoSum(self, nums: List[int], target: int) -> List[int]:
+#         n=len(nums)
+#         for i in range(n):
+#             for j in range(1, n):
+#                 if nums[i]+nums[j]==target and i!=j:
+#                     return [i,j]
+
+
+
+
+# Suggested code may be subject to a license. Learn more: ~LicenseLog:4021304437.
+from typing import List
+
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        n=len(nums)
-        for i in range(n):
-            for j in range(1, n):
-                if nums[i]+nums[j]==target and i!=j:
-                    return [i,j]
+    def maxProfit(self, prices: list[int]) -> int:
+        l, r = 0, 1
+        maxP = 0
+
+        while r < len(prices):
+            if prices[l] < prices[r]:
+                profit = prices[r] - prices[l]
+                maxP = max(maxP, profit)
+            else:
+                l = r
+            r += 1
+        return maxP
+
+
+
+
+
+
 
