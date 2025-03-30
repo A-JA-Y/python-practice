@@ -189,22 +189,39 @@
 
 
 # Suggested code may be subject to a license. Learn more: ~LicenseLog:4021304437.
-from typing import List
+# from typing import List
 
-class Solution:
-    def maxProfit(self, prices: list[int]) -> int:
-        l, r = 0, 1
-        maxP = 0
+# class Solution:
+#     def maxProfit(self, prices: list[int]) -> int:
+#         l, r = 0, 1
+#         maxP = 0
 
-        while r < len(prices):
-            if prices[l] < prices[r]:
-                profit = prices[r] - prices[l]
-                maxP = max(maxP, profit)
-            else:
-                l = r
-            r += 1
-        return maxP
+#         while r < len(prices):
+#             if prices[l] < prices[r]:
+#                 profit = prices[r] - prices[l]
+#                 maxP = max(maxP, profit)
+#             else:
+#                 l = r
+#             r += 1
+#         return maxP
 
+
+
+
+# class Solution:
+#     def containsDuplicate(self, nums: List[int]) -> bool:
+#         return len(nums) != len(set(nums))
+
+        # n = len(nums)
+        # count=0
+        # for i in range(n):
+        #     for j in range(n):
+        #         if nums[i]==nums[j]:
+        #             count+=1
+        #     if count>1:
+        #         return True
+        # return False
+        
 
 
 
