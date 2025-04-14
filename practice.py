@@ -208,20 +208,23 @@
 
 
 
-# class Solution:
-#     def containsDuplicate(self, nums: List[int]) -> bool:
-#         return len(nums) != len(set(nums))
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        return len(nums) != len(set(nums))
 
-        # n = len(nums)
-        # count=0
-        # for i in range(n):
-        #     for j in range(n):
-        #         if nums[i]==nums[j]:
-        #             count+=1
-        #     if count>1:
-        #         return True
-        # return False
+        n = len(nums)
+        count=0
+        for i in range(n):
+            for j in range(n):
+                if nums[i]==nums[j]:
+                    count+=1
+            if count>1:
+                return True
+        return False
+s = Solution()
+print(s.containsDuplicate([1,22,3,4,3,5,1,1]))
         
+
 
 
 
